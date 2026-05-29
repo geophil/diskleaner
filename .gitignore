@@ -1,0 +1,22 @@
+# Swift build artifacts
+.build/
+*.o
+*.d
+*.swp
+
+# Xcode / SPM
+*.xcodeproj/
+.swiftpm/
+DerivedData/
+xcuserdata/
+
+# macOS
+.DS_Store
+*.localized
+
+# Editor
+.vscode/
+.idea/
+
+# Icon generation temp files
+*.iconset/

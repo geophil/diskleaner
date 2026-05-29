@@ -32,6 +32,10 @@ mkdir -p "$STAGING/Contents/Resources"
 
 cp ".build/release/$APP_NAME" "$STAGING/Contents/MacOS/$APP_NAME"
 
+# Icon
+ICNS="Sources/DiskLeaner/Resources/AppIcon.icns"
+[ -f "$ICNS" ] && cp "$ICNS" "$STAGING/Contents/Resources/AppIcon.icns"
+
 cat > "$STAGING/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
@@ -62,6 +66,8 @@ cat > "$STAGING/Contents/Info.plist" <<PLIST
     <true/>
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.utilities</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
 </dict>
 </plist>
 PLIST
