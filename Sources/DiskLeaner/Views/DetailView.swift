@@ -147,11 +147,16 @@ struct DetailView: View {
 
                 Spacer()
 
+                Text("Sort")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+
                 Picker("Sort", selection: $sortOrder) {
                     Text("Size").tag(SortOption.size)
                     Text("Name").tag(SortOption.name)
                 }
                 .pickerStyle(.segmented)
+                .labelsHidden()
                 .frame(width: 130)
 
                 Button {

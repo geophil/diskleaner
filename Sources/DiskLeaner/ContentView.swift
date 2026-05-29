@@ -44,11 +44,12 @@ struct ContentView: View {
                     Text("\(Fmt.bytes(scanner.totalSelectedSize)) selected")
                         .font(.subheadline.monospacedDigit())
                         .foregroundStyle(.secondary)
+                        .padding(.horizontal, 8)
 
                     Button {
                         showGlobalConfirm = true
                     } label: {
-                        Label("Clean \(scanner.totalSelectedCount) Items", systemImage: "trash")
+                        Image(systemName: "trash")
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.red)
