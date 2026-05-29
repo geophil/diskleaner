@@ -230,7 +230,6 @@ struct ItemRow: View {
             Image(systemName: item.isSelected ? "checkmark.square.fill" : "square")
                 .font(.system(size: 16))
                 .foregroundStyle(item.isSelected ? Color.accentColor : Color.secondary)
-                .onTapGesture { onToggle() }
 
             // Icon
             Image(systemName: item.isDirectory ? "folder.fill" : "doc.fill")
@@ -274,6 +273,6 @@ struct ItemRow: View {
         }
         .padding(.vertical, 3)
         .contentShape(Rectangle())
-        .onTapGesture { onToggle() }
+        .onTapGesture { Task { @MainActor in onToggle() } }
     }
 }
