@@ -2,7 +2,9 @@
 
 A fast, local macOS disk cleaning utility. Scans your Mac for junk, caches, logs, and developer artifacts — lets you review everything before deleting anything.
 
-![DiskLeaner main window](screenshots/main.png)
+| | |
+|---|---|
+| ![DiskLeaner empty state](screenshots/empty.png) | ![DiskLeaner scanning](screenshots/main.png) |
 
 ---
 
